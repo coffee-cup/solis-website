@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Phone from '../images/phone.svg';
+import Phone from '../images/phone.png';
 
 class Header extends Component {
     render() {
