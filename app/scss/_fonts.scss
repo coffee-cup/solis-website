@@ -1,0 +1,40 @@
+
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+
+$sans             : "Muli", Verdana, Arial, sans-serif;
+$serif            : "PlayfairDisplay", serif;
+$mono             : "Courier New", monospace;
+
+// EXAMPLE
+//
+// @font-face {
+// font-family: 'Avenir Next LT Pro Condensed';
+// font-style: normal;
+// font-weight: normal;
+// src: local('Avenir Next LT Pro Condensed'), url('fonts/AvenirNextLTPro-Cn.woff') format('woff');
+// }
+
+// @font-face {
+//   font-family: 'PlayfairDisplay';
+//   src: url('fonts/PlayfairDisplay-Regular.eot');
+//   src: url('fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+//   url('fonts/PlayfairDisplay-Regular.woff') format('woff'),
+//   url('fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+//   url('fonts/PlayfairDisplay-Regular.svg#cardoregular') format('svg');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+
+// @font-face {
+//     font-family: 'PlayfairDisplay';
+//     src: url('fonts/playfairdisplay-bold-webfont.eot');
+//     src: url('fonts/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
+//          url('fonts/playfairdisplay-bold-webfont.woff') format('woff'),
+//          url('fonts/playfairdisplay-bold-webfont.ttf') format('truetype'),
+//          url('fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
+//     font-weight: 600;
+//     font-style: normal;
+
+// }

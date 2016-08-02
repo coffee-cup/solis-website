@@ -1,0 +1,129 @@
+// Grid Styles
+
+@import 'variables';
+
+// Grid settings
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: inside,
+  global-box-sizing: border-box
+  );
+
+@mixin span-m100($width) {
+  @include span($width);
+  @media (max-width: $mobile) {
+    @include span(100%);
+  }
+}
+
+@mixin cont-m100($width) {
+  @include container($width);
+  @media (max-width: $mobile) {
+    @include container(100%);
+  }
+}
+
+.row {
+  @include container($row);
+  @media (max-width: $mobile) {
+    @include container($row-small);
+  }
+  @media (max-width: $xmobile) {
+    @include container($row-extra);
+  }
+}
+
+.c50m100 {
+  @include cont-m100(50%);
+}
+
+.c80r {
+  @include container(80%);
+  @media (max-width: $tablet) {
+    @include container($row-tablet);
+  }
+  @media (max-width: $mobile) {
+    @include container($row-mobile);
+  }
+}
+
+.c100 {
+  @include container(100%);
+}
+
+.s10 {
+  @include span(10%);
+}
+
+.s10m100 {
+  @include span-m100(10%);
+}
+
+.s20 {
+  @include span(20%);
+}
+
+.s20m100 {
+  @include span-m100(20%);
+}
+
+.s30 {
+  @include span(30%);
+}
+
+.s30m100 {
+  @include span-m100(30%);
+}
+
+.s40 {
+  @include span(40%);
+}
+
+.s40m100 {
+  @include span-m100(40%);
+}
+
+.s50 {
+  @include span(50%);
+}
+
+.s50m100 {
+  @include span-m100(50%);
+}
+
+.s60 {
+  @include span(60%);
+}
+
+.s60m100 {
+  @include span-m100(60%);
+}
+
+.s70 {
+  @include span(70%);
+}
+
+.s70m100 {
+  @include span-m100(70%);
+}
+
+.s80 {
+  @include span(80%);
+}
+
+.s80m100 {
+  @include span-m100(80%);
+}
+
+.s90 {
+  @include span(90%);
+}
+
+.s90m100 {
+  @include span-m100(90%);
+}
+
+.s100 {
+  @include span(100%);
+}
