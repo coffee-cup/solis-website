@@ -1,0 +1,10 @@
+footer {
+  @include break(not-small) {
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+  }
+
+  .heart {
+    color: $accent-colour;
+  }
+}

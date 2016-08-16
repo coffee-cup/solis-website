@@ -1,0 +1,52 @@
+$phone-width: 375px;
+$phone-height: 667px;
+
+// Phone fixed on the side
+.side-phone {
+
+  // Hide on small screens
+  @include break(small) {
+    display: none;
+  }
+
+  position: fixed;
+  width: 33%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+
+  padding: 2rem;
+
+  .phone-image {
+    margin: auto; // center it
+  }
+}
+
+// Phone on mobile
+.mobile-phone {
+  // Show on small screens
+  @include break(not-small) {
+    display: none;
+  }
+
+  margin-top: -10rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+// All screen sizes
+.phone-image {
+  width: $phone-width;
+  height: $phone-height;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img.phone-screen {
+  display: block;
+  margin: auto;
+
+  max-width: 100%;
+  max-height: 100%;
+}

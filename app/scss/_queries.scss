@@ -14,7 +14,44 @@
  *
  */
 
+
+// CSS Media Query Applies Usage
+// @media screen and (max-width: 35.5em) Max 568px _xs-*
+// @media screen and (max-width: 48em) Max 768px _sm-*
+// @media screen and (max-width: 64em) Max 1024px  _md-*
+// @media screen and (max-width: 80em)
+
 @mixin break($point) {
+  @if $point == xs {
+    @media screen and (max-width: 35.5em) {
+      @content;
+    }
+  }
+
+  @if $point == sm {
+    @media screen and (min-width: 35.5em) and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $point == md {
+    @media screen and (min-width: 48em) and (max-width: 64em) {
+      @content;
+    }
+  }
+
+  @if $point == lg {
+    @media screen and (min-width: 64em) and (max-width: 80em) {
+      @content;
+    }
+  }
+
+  @if $point == small {
+    @media screen and (max-width: 48rem) {
+      @content;
+    }
+  }
+
   @if $point == not-small {
     @media screen and (min-width: 48em) {
       @content;

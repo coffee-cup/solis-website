@@ -10,7 +10,7 @@
     "copy": "cp -r public/* build",
     "clean": "rm -rf build",
     "server": "node server/index.js",
-    "deploy": "surge build/ solisapp.xyz"
+    "deploy": "npm run build; surge build/ solisapp.xyz"
   },
   "author": "Jake Runzer <jakerunzer@gmail.com> (https://jakerunzer.xyz)",
   "license": "ISC",

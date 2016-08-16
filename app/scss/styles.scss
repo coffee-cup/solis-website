@@ -8,6 +8,12 @@
 @import 'gridlex';
 @import 'utils';
 
+@import 'features/features';
+@import 'background/background';
+@import 'phone/phone';
+@import 'copy/copy';
+@import 'footer/footer';
+
 /* Makes border-box properties */
 // @include border-box-sizing;
 
@@ -20,7 +26,7 @@ html, body {
 body {
   font-family: $sans;
   color: $text-dark;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 h1, h2 {
@@ -33,13 +39,13 @@ p {
 }
 
 a, a:visited {
-  text-decoration: underline;
-  color: $text-dark;
+  text-decoration: none;
+  color: $accent-colour;
   transition: 0.250ms ease-in-out;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: $accent-colour;
   transition: $s-animation;
 }
@@ -56,6 +62,10 @@ a.none, a.none:hover {
   min-height: 100vh;
 }
 
+.b-white {
+  background-color: white;
+}
+
 .page {
   width: 100%;
   margin: 0;
@@ -69,46 +79,10 @@ a.none, a.none:hover {
   min-height: 95vh;
   width: 100%;
   padding: 0;
-  // background-color: rgba(95, 255, 205, 0.50);
-  background-color: $main-colour;
 }
 
 .desc {
   padding: 0 1rem;
-}
-
-header {
-  min-height: 100vh;
-  background-image:
-  linear-gradient(
-      to top right,
-      $blue3, $blue1
-      );
-  color: $text-light;
-
-  .head-copy {
-    padding: 0 $side-padding;
-
-    @include break(not-small) {
-      margin-top: 22vh;
-    }
-  }
-
-  .head-image {
-    @include break(not-small) {
-      margin-top: 10vh;
-    }
-    img {
-      display: block;
-      margin: auto;
-      max-height: 80vh;
-      max-width: 80%;
-
-      @include break(not-small) {
-        max-width: initial;
-      }
-    }
-  }
 }
 
 .button {
@@ -133,10 +107,4 @@ header {
 
 .button:hover {
   color: $text-dark;
-}
-
-footer {
-  p {
-    font-size: 1em;
-  }
 }

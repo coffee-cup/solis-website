@@ -45,6 +45,14 @@
 
 // WHITE SPACE
 
+.gutter-small {
+  @include break(small) {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .vh {
   height: 100vh;
   max-height: 100vh;
@@ -136,13 +144,16 @@
   @include border-radius($bradius)
 }
 
-.center-vert-parent {
-  position: relative;
-}
+.center-vertical {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
-.center-vert-child {
-  position: absolute;
-  top: 20%;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
 }
 
 .overhidden {
