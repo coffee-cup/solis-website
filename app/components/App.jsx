@@ -11,7 +11,7 @@ class App extends Component {
             <div className="main">
                 <div className="background"></div>
                 <div className="grid relative">
-                    <div className="pb0 full b-white col-8_sm-12">
+                    <div className="pb0 full white-back col-7_sm-12">
                         <Copy />
                         <Footer />
                     </div>

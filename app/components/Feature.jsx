@@ -5,10 +5,10 @@ class Feature extends Component {
         return (
             <div className="feature col-12 grid-centered">
                 <div className="feature-copy col-6_md-8_xs-12">
-                    <h3 className="feature-head f4">
+                    <h2 className="feature-head f2">
                         {this.props.title}
-                    </h3>
-                    <p className="feature-body measure">
+                    </h2>
+                    <p className="feature-body f4 measure">
                         {this.props.body}
                     </p>
                 </div>

@@ -5,19 +5,19 @@ import Feature from './Feature.jsx';
 const features = [
     {
         title: 'Notifications',
-        body: 'Know exactly when sunrise, sunset, first light, and last light happen.',
+        body: '🌙 Know exactly when sunrise, sunset, first light, and last light happen ☀️',
     }, {
         title: 'Widget',
-        body: 'Dead simple today widget to know at a glance when the next sun event is.',
+        body: 'Dead simple today widget to know at a glance when the next sun event is ',
     }, {
         title: 'Golden/Blue Hours',
-        body: 'Easily see the times of best light for photography.',
+        body: 'Easily see the times of best light for photography 📸',
     }, {
-        title: 'Any city around the world',
-        body: 'Check how dark it is for your friends around the world.',
+        title: 'Any City',
+        body: '🌍 Check how dark it is for your friends around the world 🌎',
     }, {
         title: 'Works Offline',
-        body: 'Cache locations and timezones for seamless use without a network connection ⛺️.',
+        body: 'Cache locations and timezones for seamless use without a network connection ⛺️',
     },
 ];
 

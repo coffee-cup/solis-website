@@ -1,8 +1,8 @@
 @import 'normalize';
+@import 'queries';
 @import 'sass-css3-mixins';
 @import './css/animate.min.css';
 @import './css/tachyons.css';
-@import 'queries';
 @import 'fonts';
 @import 'variables';
 @import 'gridlex';
@@ -16,6 +16,10 @@
 
 /* Makes border-box properties */
 // @include border-box-sizing;
+
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
@@ -31,11 +35,13 @@ body {
 
 h1, h2 {
   @extend .light;
+  color: $main-colour;
 }
 
 p {
   font-size: 18px;
   line-height: 1.6;
+  color: $text-dark;
 }
 
 a, a:visited {
@@ -60,10 +66,6 @@ a.none, a.none:hover {
 
 .full {
   min-height: 100vh;
-}
-
-.b-white {
-  background-color: white;
 }
 
 .page {
@@ -107,4 +109,11 @@ a.none, a.none:hover {
 
 .button:hover {
   color: $text-dark;
+}
+
+.white-back {
+  background-color: white;
+  @include break(not-small) {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
 }
