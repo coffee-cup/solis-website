@@ -1,5 +1,8 @@
 @import './feature';
 
 .features {
-
+    @include break(small) {
+        background-color: white;
+        margin-top: 2rem;
+    }
 }

@@ -1,22 +1,39 @@
 .feature {
     // text-align: center;
-    margin-top: 4rem;
-
+    @include break(not-small) {
+        margin-top: 4rem;
+    }
+    @include break(small) {
+        text-align: center;
+    }
+    padding-right: 0;
     &:first-of-type {
         margin-top: 0;
+    }
+}
+
+.feature-head {
+    @include break(small) {
+        font-size: 2rem;
     }
 }
 
 .feature-body {
     // display: block;
     // margin: auto;
+    @include break(small) {
+        font-size: 18px;
+    }
 }
 
 .feature-icon {
     margin-right: 2rem;
-    color: $blue1;
 
+    color: $blue1;
+    @include break(small) {
+        color: $blue3;
+    }
     &.icon-widget {
-        font-size: 0.8em;
+        font-size: .8em;
     }
 }

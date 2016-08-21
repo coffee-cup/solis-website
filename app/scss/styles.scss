@@ -21,25 +21,30 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
+    width: 100vw;
     margin: 0;
     padding: 0;
-    width: 100vw;
 }
 
 body {
     font-family: $sans;
-    color: $text-dark;
     font-weight: $normal;
-// overflow-x: hidden;
 
+    overflow-x: hidden;
+
+    color: $text-dark;
     /* Better Font Rendering =========== */
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-weight: $light;
+
     color: $main-colour;
 
     @include break(not-small) {
@@ -50,6 +55,7 @@ h1, h2 {
 p {
     font-size: 18px;
     line-height: 1.6;
+
     color: $text-dark;
 
     @include break(not-small) {
@@ -57,23 +63,31 @@ p {
     }
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: $blue1;
+a,
+a:visited {
     transition: $s-animation;
+    text-decoration: none;
+
+    color: $blue1;
+
+    @include break(small) {
+        color: $red;
+    }
 }
 
 a:hover {
-    text-decoration: underline;
-    color: $red;
     transition: $s-animation;
+    text-decoration: underline;
+
+    color: $red;
 }
 
 a.under {
     text-decoration: under;
 }
 
-a.none, a.none:hover {
+a.none,
+a.none:hover {
     text-decoration: none;
 }
 
@@ -91,42 +105,7 @@ a.none, a.none:hover {
 }
 
 .main {
-    min-height: 95vh;
     width: 100%;
+    min-height: 95vh;
     padding: 0;
-}
-
-.desc {
-    padding: 0 1rem;
-}
-
-.button {
-    display: block;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    color: $text-light;
-    background-color: $accent-colour;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 2px;
-    height: 40px;
-    transition: $s-animation;
-
-    a {
-        text-decoration: none;
-    }
-}
-
-.button:hover {
-    color: $text-dark;
-}
-
-.white-back {
-// background-color: white;
-// @include break(not-small) {
-//   background-color: rgba(255, 255, 255, 0.95);
-// }
 }

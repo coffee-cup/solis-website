@@ -1,10 +1,14 @@
 footer {
-  @include break(not-small) {
-    padding-top: 50vh;
-    padding-bottom: 50vh;
-  }
+    @include break(small) {
+        text-align: center;
 
-  .heart {
-    color: $accent-colour;
-  }
+        background-color: white;
+    }
+    @include break(not-small) {
+        padding-top: 50vh;
+        padding-bottom: 50vh;
+    }
+    .heart {
+        color: $accent-colour;
+    }
 }

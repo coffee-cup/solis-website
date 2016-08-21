@@ -8,17 +8,17 @@ const features = [
         body: '🌙 Toggle notifications for sunrise, sunset, first light, and last night. Know exactly in the day when it is light and dark out. ☀️',
         icon: 'icon-bell',
     }, {
-        title: 'Widget',
-        body: 'Dead simple today widget to know at a glance when the next sun event is.',
-        icon: 'icon-widget',
+        title: 'Any City',
+        body: '🌍 Check how dark it is for your friends and family around the world. 🌎',
+        icon: 'icon-city',
     }, {
         title: 'Golden/Blue Hours',
         body: 'The best light for photography occurs right before and after sunrise and sunset. Solis cleary shows you when these times are so you never miss the perfect shot. 📸',
         icon: 'icon-golden',
     }, {
-        title: 'Any City',
-        body: '🌍 Check how dark it is for your friends around the world. 🌎',
-        icon: 'icon-city',
+        title: 'Widget',
+        body: 'Dead simple today widget to know at a glance when the next sun event is. 👌',
+        icon: 'icon-widget',
     }, {
         title: 'Works Offline',
         body: 'Locations and timezones are cached for seamless use without a network connection. ⛺️',

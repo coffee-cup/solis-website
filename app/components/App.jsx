@@ -9,7 +9,7 @@ class App extends Component {
         return (
             <div className="main">
                 <Background />
-                <div className="grid relative">
+                <div className="mw100 m0 grid relative">
                     <div className="pb0 full white-back col-7_sm-12">
                         <Copy />
                         <Footer />

@@ -22,7 +22,7 @@ class Copy extends Component {
                         <p className="head-body f3">
                             sunrise, sunset, and twilight time tracker
                         </p>
-                        <a href="https://jakerunzer.xyz">
+                        <a href="#">
                             <img srcSet={Badge} className="app-store-badge" />
                         </a>
                     </div>

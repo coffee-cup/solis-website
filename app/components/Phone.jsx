@@ -12,7 +12,7 @@ class Phone extends Component {
                         onCanPlayThrough={() => {
                             // Do stuff
                         }}>
-                        <source src="/phone.mov" type="video/webm" />
+                        <source src="/phone.mp4" type="video/mp4" />
                         </Video>
                     </div>
                 </div>

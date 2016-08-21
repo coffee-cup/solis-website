@@ -8,20 +8,29 @@
 }
 
 .head-body {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .head-centered-group {
-  margin-top: -2rem;
+    @include break(not-small) {
+        margin-top: -2rem;
+    }
+    @include break(small) {
+        margin-top: 2rem;
+    }
 }
 
 .app-store-badge {
-  width: 8rem;
+    width: 8rem;
 }
 
 .header {
     h1, p {
         color: $text-light;
     }
+}
+
+.head-title {
+    margin-left: -6px;
 }
