@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --hot --inline --progress",
     "dash": "NODE_ENV=dev webpack-dashboard -- webpack-dev-server --hot --inline --progress",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "npm run clean; NODE_ENV=production webpack -p",
     "postbuild": "npm run copy",
     "copy": "cp -r public/* build",
     "clean": "rm -rf build",
