@@ -21,6 +21,9 @@ $phone-height: 667px;
 }
 
 .phone-container {
+    @media screen and (min-width: 1200px) and (min-height: 600px) {
+        margin: 4em;
+    }
     @media screen and (min-width: 1600px) {
         margin: 8em;
     }

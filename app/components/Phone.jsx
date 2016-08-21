@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import { default as Video } from 'react-html5video';
 
 class Phone extends Component {
+    constructor() {
+        super();
+        setTimeout(function() {
+            var video = document.getElementsByClassName('video__el')[0];
+            video.play();
+        }, 5000);
+    }
+
     render() {
         return (
             <div className="phone-video center-vertical-not-small">
                 <div className="phone-container">
                     <div className="phone-model">
-                        <Video autoPlay loop muted
+                        <Video loop muted
                         poster="/phone-screen.png"
                         onCanPlayThrough={() => {
                             // Do stuff
