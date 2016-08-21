@@ -3,7 +3,7 @@
 // TYPOGRAPHY
 
 .light {
- font-weight: 200;
+ font-weight: 300;
 }
 
 .regular {
@@ -45,6 +45,10 @@
 
 .text-coloured {
   color: $main-colour;
+}
+
+.small-measure {
+    max-width: 26rem;
 }
 
 // WHITE SPACE
@@ -158,6 +162,20 @@
   -webkit-box-align: center;
 
   align-items: center;
+}
+
+.center-vertical-not-small {
+    @include break(not-small) {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+
+      align-items: center;
+    }
 }
 
 .overhidden {

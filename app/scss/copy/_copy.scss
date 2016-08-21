@@ -1,14 +1,27 @@
 .copy {
-  .head-body {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
+    @include break(large) {
+        margin-left: 10rem;
+    }
+}
 
-  .head-centered-group {
-    margin-top: -2rem;
-  }
+.gradient-background {
+}
 
-  .app-store-badge {
-    width: 7rem;
-  }
+.head-body {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.head-centered-group {
+  margin-top: -2rem;
+}
+
+.app-store-badge {
+  width: 8rem;
+}
+
+.header {
+    h1, p {
+        color: $text-light;
+    }
 }

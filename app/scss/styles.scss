@@ -18,102 +18,115 @@
 // @include border-box-sizing;
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
 }
 
 body {
-  font-family: $sans;
-  color: $text-dark;
-  // overflow-x: hidden;
+    font-family: $sans;
+    color: $text-dark;
+    font-weight: $normal;
+// overflow-x: hidden;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2 {
-  @extend .light;
-  color: $main-colour;
+    font-weight: $light;
+    color: $main-colour;
+
+    @include break(not-small) {
+        color: $text-light;
+    }
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: $text-dark;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $text-dark;
+
+    @include break(not-small) {
+        color: $text-light;
+    }
 }
 
 a, a:visited {
-  text-decoration: none;
-  color: $accent-colour;
-  transition: 0.250ms ease-in-out;
+    text-decoration: none;
+    color: $blue1;
+    transition: $s-animation;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: $accent-colour;
-  transition: $s-animation;
+    text-decoration: underline;
+    color: $red;
+    transition: $s-animation;
 }
 
 a.under {
-  text-decoration: under;
+    text-decoration: under;
 }
 
 a.none, a.none:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .full {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 .page {
-  width: 100%;
-  margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
 .app {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .main {
-  min-height: 95vh;
-  width: 100%;
-  padding: 0;
+    min-height: 95vh;
+    width: 100%;
+    padding: 0;
 }
 
 .desc {
-  padding: 0 1rem;
+    padding: 0 1rem;
 }
 
 .button {
-  display: block;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 0;
-  color: $text-light;
-  background-color: $accent-colour;
-  font-size: 1.5rem;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
-  height: 40px;
-  transition: $s-animation;
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    color: $text-light;
+    background-color: $accent-colour;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    height: 40px;
+    transition: $s-animation;
 
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+    }
 }
 
 .button:hover {
-  color: $text-dark;
+    color: $text-dark;
 }
 
 .white-back {
-  background-color: white;
-  @include break(not-small) {
-    background-color: rgba(255, 255, 255, 0.95);
-  }
+// background-color: white;
+// @include break(not-small) {
+//   background-color: rgba(255, 255, 255, 0.95);
+// }
 }

@@ -5,19 +5,24 @@ import Feature from './Feature.jsx';
 const features = [
     {
         title: 'Notifications',
-        body: '🌙 Know exactly when sunrise, sunset, first light, and last light happen ☀️',
+        body: '🌙 Toggle notifications for sunrise, sunset, first light, and last night. Know exactly in the day when it is light and dark out. ☀️',
+        icon: 'icon-bell',
     }, {
         title: 'Widget',
-        body: 'Dead simple today widget to know at a glance when the next sun event is ',
+        body: 'Dead simple today widget to know at a glance when the next sun event is.',
+        icon: 'icon-widget',
     }, {
         title: 'Golden/Blue Hours',
-        body: 'Easily see the times of best light for photography 📸',
+        body: 'The best light for photography occurs right before and after sunrise and sunset. Solis cleary shows you when these times are so you never miss the perfect shot. 📸',
+        icon: 'icon-golden',
     }, {
         title: 'Any City',
-        body: '🌍 Check how dark it is for your friends around the world 🌎',
+        body: '🌍 Check how dark it is for your friends around the world. 🌎',
+        icon: 'icon-city',
     }, {
         title: 'Works Offline',
-        body: 'Cache locations and timezones for seamless use without a network connection ⛺️',
+        body: 'Locations and timezones are cached for seamless use without a network connection. ⛺️',
+        icon: 'icon-offline',
     },
 ];
 
@@ -26,7 +31,7 @@ class Features extends Component {
         return (
             <div className="features gutter-small col-12 grid">
                 {features.map(function(feature) {
-                    return <Feature key={feature.title} {...feature} />
+                    return <Feature key={feature.title} {...feature} />;
                 })}
             </div>
         );

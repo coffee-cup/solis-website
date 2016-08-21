@@ -1,0 +1,22 @@
+.feature {
+    // text-align: center;
+    margin-top: 4rem;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.feature-body {
+    // display: block;
+    // margin: auto;
+}
+
+.feature-icon {
+    margin-right: 2rem;
+    color: $blue1;
+
+    &.icon-widget {
+        font-size: 0.8em;
+    }
+}

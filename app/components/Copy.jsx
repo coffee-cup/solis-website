@@ -28,9 +28,7 @@ class Copy extends Component {
                     </div>
                 </div>
 
-                <div className="mobile-phone">
-
-                </div>
+                <Phone />
 
                 <Features />
             </div>
