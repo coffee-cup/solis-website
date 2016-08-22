@@ -5,11 +5,11 @@ import Feature from './Feature.jsx';
 const features = [
     {
         title: 'Notifications',
-        body: 'Toggle notifications for sunrise, sunset, first light, and last night. Know exactly in the day when it is light and dark out. ☀️ 🌙',
+        body: 'Toggle notifications for sunrise, sunset, first light, and last night. Know exactly what time of day you can expect it to be light and dark out. ☀️ 🌙',
         icon: 'icon-bell',
     }, {
         title: 'Any City',
-        body: 'Check how dark it is for your friends and family around the world. 🌎 🌏 🌍',
+        body: 'See when the sun sets and rises for your friends around the world. 🌎 🌏 🌍',
         icon: 'icon-city',
     }, {
         title: 'Golden/Blue Hours',
