@@ -17,7 +17,7 @@ const features = [
         icon: 'icon-golden',
     }, {
         title: 'Widget',
-        body: 'Dead simple today widget to know at a glance when the next sun event is. 👌',
+        body: 'Simple today widget to know at a glance when the next sun event is. 👌',
         icon: 'icon-widget',
     }, {
         title: 'Works Offline',
