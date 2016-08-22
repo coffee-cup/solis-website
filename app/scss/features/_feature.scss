@@ -9,6 +9,9 @@
     padding-right: 0;
     &:first-of-type {
         margin-top: 0;
+        @include break(small) {
+            margin-top: 1rem;
+        }
     }
 }
 
