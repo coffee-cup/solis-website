@@ -1,5 +1,8 @@
 .copy {
-    @include break(large) {
+    @media screen and (min-width: 80em) {
+        margin-left: 4rem;
+    }
+    @media screen and (min-width: 100em) {
         margin-left: 10rem;
     }
 }

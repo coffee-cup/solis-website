@@ -7,7 +7,7 @@ class Phone extends Component {
         setTimeout(function() {
             var video = document.getElementsByClassName('video__el')[0];
             video.play();
-        }, 5000);
+        }, 3000);
     }
 
     render() {

@@ -14,7 +14,7 @@ class Copy extends Component {
     render() {
         return (
             <div className="copy grid-centered">
-                <div className="header col-6_md-8_xs-12 full center-vertical">
+                <div className="header col-7_md-8_sm-10_xs-12 full center-vertical">
                     <div className="gutter-small head-centered-group">
                         <h1 className="head-title mb0 mt0 f-headline">
                             Solis
