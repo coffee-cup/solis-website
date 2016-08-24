@@ -37,3 +37,13 @@
 .head-title {
     margin-left: -6px;
 }
+
+.twitter {
+    @include break(small) {
+        text-align: center;
+    }
+
+    @include break(not-small) {
+        padding-top: 4rem;
+    }
+}

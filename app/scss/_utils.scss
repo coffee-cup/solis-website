@@ -186,3 +186,11 @@
 .pointer {
     cursor: pointer;
 }
+
+// Backgrounds
+
+.white-small {
+    @include break(small) {
+        background-color: white;
+    }
+}

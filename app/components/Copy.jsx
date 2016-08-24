@@ -31,6 +31,12 @@ class Copy extends Component {
                 <Phone />
 
                 <Features />
+
+                <div className="twitter white-small gutter-small mt0 pt1 col-7_md-8_sm-10_xs-12">
+                    <p>
+                        Find me on Twitter <span className="icon-twitter"></span> <a href="https://twitter.com/solis_app">@solis_app</a> for support and important updates.
+                    </p>
+                </div>
             </div>
         );
     }

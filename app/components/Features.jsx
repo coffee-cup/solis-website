@@ -29,7 +29,7 @@ const features = [
 class Features extends Component {
     render() {
         return (
-            <div className="features gutter-small col-12 grid">
+            <div className="features white-small gutter-small col-12 grid">
                 {features.map(function(feature) {
                     return <Feature key={feature.title} {...feature} />;
                 })}
