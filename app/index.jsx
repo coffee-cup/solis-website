@@ -5,8 +5,9 @@ import ga from 'react-ga';
 
 import Styles from './scss/styles.scss';
 
-// Components
+// Pages
 import App from './components/App.jsx';
+import About from './components/About.jsx';
 
 ga.initialize('UA-81828512-1');
 

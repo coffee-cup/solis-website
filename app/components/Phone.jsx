@@ -4,6 +4,8 @@ import { default as Video } from 'react-html5video';
 class Phone extends Component {
     constructor() {
         super();
+
+        // Start phone video after 3s giving it some time to load
         setTimeout(function() {
             var video = document.getElementsByClassName('video__el')[0];
             video.play();

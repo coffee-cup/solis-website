@@ -1,14 +1,16 @@
 .feature {
+    padding-right: 0;
     // text-align: center;
+
     @include break(not-small) {
         margin-top: 4rem;
     }
     @include break(small) {
         text-align: center;
     }
-    padding-right: 0;
     &:first-of-type {
         margin-top: 0;
+
         @include break(small) {
             margin-top: 1rem;
         }
@@ -33,6 +35,7 @@
     margin-right: 2rem;
 
     color: $blue1;
+
     @include break(small) {
         color: $blue3;
     }

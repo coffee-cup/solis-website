@@ -43,6 +43,22 @@
     color: gray;
 }
 
+.dark-header {
+    color: $main-colour;
+}
+
+.light-header {
+    color: $text-light;
+}
+
+.dark-body {
+    color: $text-dark;
+}
+
+.light-body {
+    color: $text-light;
+}
+
 .text-coloured {
     color: $main-colour;
 }
@@ -193,4 +209,8 @@
     @include break(small) {
         background-color: white;
     }
+}
+
+.white {
+    background-color: white;
 }
