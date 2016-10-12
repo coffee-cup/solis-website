@@ -1,9 +1,10 @@
+// Tell webpack to bring in styles
+import Styles from './scss/styles.scss';
+
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 import ga from 'react-ga';
-
-import Styles from './scss/styles.scss';
 
 // Pages
 import App from './components/App.jsx';
