@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Background extends Component {
-    render() {
-        return (
-            <div className="background"></div>
-        );
-    }
+  render() {
+    return <div className="background"></div>;
+  }
 }
 
 export default Background;
