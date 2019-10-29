@@ -4776,13 +4776,6 @@ react-dom@^0.14.8:
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.9.tgz#05064a3dcf0fb1880a3b2bfc9d58c55d8d9f6293"
   integrity sha1-BQZKPc8PsYgKOyv8nVjFXY2fYpM=
 
-react-ga@^1.4.1:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-1.5.0.tgz#6bf8011950b024095305d49e170d447d3bc76aaf"
-  integrity sha1-a/gBGVCwJAlTBdSeFw1EfTvHaq8=
-  dependencies:
-    object-assign "^4.0.1"
-
 react-html5video@^1.2.12:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-html5video/-/react-html5video-1.4.0.tgz#3a177bb19a15786c1072fd410891d497cae6992e"

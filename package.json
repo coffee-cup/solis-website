@@ -21,7 +21,6 @@
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "react-ga": "^1.4.1",
     "react-html5video": "^1.2.12",
     "react-router": "^2.0.0"
   },
