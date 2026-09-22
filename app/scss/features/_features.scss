@@ -1,7 +1,0 @@
-@import './feature';
-
-.features {
-    @include break(small) {
-        margin-top: 2rem;
-    }
-}

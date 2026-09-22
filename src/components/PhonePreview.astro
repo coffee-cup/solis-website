@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import timeline from '../assets/screenshots/01-timeline.png';
+import themes from '../assets/screenshots/02-themes.png';
+import locations from '../assets/screenshots/03-locations.png';
+import alerts from '../assets/screenshots/04-alerts.png';
+
+const screens = [
+  { id: 'timeline', label: 'Timeline', image: timeline, alt: 'Solis timeline showing sunset and three stages of twilight in Vancouver.' },
+  { id: 'themes', label: 'Themes', image: themes, alt: 'The Solis theme picker with Ember selected and five colour palettes.' },
+  { id: 'locations', label: 'Places', image: locations, alt: 'Saved places in Solis: Vancouver, Reykjavík, Tokyo, and Lisbon.' },
+  { id: 'alerts', label: 'Alerts', image: alerts, alt: 'Solis settings with sunrise and sunset notifications enabled.' },
+];
+---
+<fieldset class="preview">
+  <legend class="sr-only">App screenshots</legend>
+  <div class="screen-options">
+    {screens.map((screen, i) => (
+      <div class="screen-option">
+        <input type="radio" name="screen" id={`screen-${screen.id}`} value={screen.id} checked={i === 0} />
+        <label for={`screen-${screen.id}`}>{screen.label}</label>
+      </div>
+    ))}
+  </div>
+  <div class="phone-stage">
+    <div class="phone">
+      <span class="side-button side-button-left" aria-hidden="true"></span>
+      <span class="side-button side-button-right" aria-hidden="true"></span>
+      <div class="phone-screen">
+        {screens.map((screen, i) => (
+          <div class="screen" data-screen={screen.id}>
+            <Image src={screen.image} alt={screen.alt} widths={[330, 660, 990]} sizes="(max-width: 760px) 258px, clamp(180px, 17vw, 382px)" format="webp" quality={85} loading="eager" fetchpriority={i === 0 ? 'high' : 'low'} />
+          </div>
+        ))}
+        <div class="island" aria-hidden="true"><span></span></div>
+        <div class="home-indicator" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+<style>
+  .preview { margin: 0; padding: 0; border: 0; min-width: 0; display: flex; align-items: center; flex-direction: column; }
+  .phone-stage { position: relative; order: 0; display: grid; place-items: center; width: 100%; isolation: isolate; }
+  .phone { font-size: calc(var(--phone-width) / 18.625); width: var(--phone-width); padding: 0.5em; position: relative; border-radius: 3em; background: #14181e; border: 1px solid #8c9ba3; box-shadow: 0 0 0 1px #182129, inset 0 0 0 2px #465159, 0 3px 0.3125em #13244340, 0 2.1875em 4.0625em -1.125em #14264d65; }
+  .phone-screen { position: relative; overflow: hidden; border-radius: 2.4375em; aspect-ratio: 1320 / 2868; background: #4b079c; }
+  .screen { display: none; }
+  .screen img { display: block; width: 100%; height: auto; }
+  .island { position: absolute; top: 0.75em; left: 50%; transform: translateX(-50%); width: 5.125em; height: 1.4375em; border-radius: 1.25em; background: #08090c; }
+  .island span { position: absolute; width: 0.4375em; height: 0.4375em; right: 0.5625em; top: 0.5em; border-radius: 50%; background: radial-gradient(circle at 40% 30%, #1d2e4d, #080b12); }
+  .home-indicator { position: absolute; bottom: 0.5em; width: 32%; height: 0.25em; border-radius: 0.3125em; background: #ffffffa6; left: 34%; }
+  .side-button { position: absolute; background: #455159; width: 3px; border-radius: 2px; }
+  .side-button-left { left: -0.25em; top: 7em; height: 3.0625em; box-shadow: 0 3.75em 0 #455159; }
+  .side-button-right { right: -0.25em; top: 9.8125em; height: 4.375em; }
+  .screen-options { order: 1; display: flex; gap: 2px; margin-top: 2.0625rem; padding: 0.25rem; border: 1px solid #ffffff40; background: #19386380; border-radius: 1.875rem; }
+  .screen-option { position: relative; }
+  input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; }
+  label { position: relative; display: block; padding: 0.6875rem 0.9375rem; border-radius: 1.5rem; font-size: 0.75rem; font-weight: 650; color: #fff; cursor: pointer; transition: background 180ms, color 180ms; }
+  input:checked + label { color: #21436d; background: #fff; box-shadow: 0 2px 0.3125rem #14244714; }
+  input:focus-visible + label { outline: 3px solid #d8fff1; outline-offset: 0.3125rem; }
+  label:hover { background: #ffffff20; }
+  .preview:has(#screen-timeline:checked) [data-screen='timeline'],
+  .preview:has(#screen-themes:checked) [data-screen='themes'],
+  .preview:has(#screen-locations:checked) [data-screen='locations'],
+  .preview:has(#screen-alerts:checked) [data-screen='alerts'] { display: block; }
+  @media (max-width: 47.5rem) {
+    .phone { font-size: 16px; width: 276px; border-radius: 2.75em; }
+    .phone-screen { border-radius: 2.1875em; }
+  }
+  @media (prefers-reduced-motion: reduce) { label { transition: none; } }
+</style>

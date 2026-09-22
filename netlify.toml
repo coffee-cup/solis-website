@@ -1,0 +1,7 @@
+[build]
+command = "bun run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "26.10.0"
+BUN_VERSION = "1.4.2"

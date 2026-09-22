@@ -1,0 +1,72 @@
+:root {
+  font-size: 16px;
+  font-family: 'Mulish Variable', sans-serif;
+  color: #fff;
+  background: #397dbc;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; }
+body { margin: 0; min-height: 100svh; background: linear-gradient(to top right, #4e50b8, #46eae7); background-attachment: fixed; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+img, svg { vertical-align: middle; }
+a:focus-visible { outline: 3px solid #b9ffed; outline-offset: 0.375rem; border-radius: 3px; }
+::selection { background: #b8ece6; color: #263257; }
+h1, h2, p { margin: 0; }
+h1, h2 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.container { width: 100%; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.skip-link { position: fixed; top: -6.25rem; left: 1.25rem; z-index: 10; background: #fff; color: #252d46; padding: 0.875rem 1.25rem; border-radius: 0.3125rem; }
+.skip-link:focus { top: 0.9375rem; }
+.layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: start; }
+.copy-column { min-width: 0; margin-left: 0.5rem; }
+.intro, .features { width: 58.333333%; margin-inline: auto; }
+.intro { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-block: 0 3rem; }
+h1 { font-size: 6rem; font-weight: 300; line-height: 1.25; letter-spacing: normal; }
+.intro p { font-size: 1.5rem; line-height: 1.6; max-width: 28rem; margin: 1rem 0 1.5rem; }
+.phone-column { --phone-width: clamp(180px, min(17vw, calc((100svh - 220px) * 1320 / 2868)), 400px); --preview-height: calc(var(--phone-width) * 2868 / 1320 + 80px); position: fixed; top: max(24px, calc((100svh - var(--preview-height)) / 2)); right: 0; width: 41.666667%; min-width: 0; }
+.features { display: flex; flex-direction: column; gap: 4rem; padding-block: 1.5rem 4rem; }
+.feature h2 { font-size: 2.25rem; font-weight: 300; line-height: 1.25; letter-spacing: normal; }
+.feature p { font-size: 1.25rem; line-height: 1.6; color: #eef5ff; margin-top: 0.875rem; max-width: 26.25rem; }
+.palettes { display: flex; list-style: none; padding: 0; margin: 1.75rem 0 0; gap: 1.0625rem; }
+.palettes li { text-align: center; font-size: 0.6875rem; }
+.palette-swatch { display: block; height: 2.875rem; width: 3.375rem; border-radius: 0.75rem; margin-bottom: 0.625rem; border: 1px solid #ffffff40; }
+.site-footer { width: 58.333333%; padding-block: 50svh; color: #fff; font-size: 1.25rem; line-height: 1.6; }
+.footer-copy { width: 50%; margin-inline: auto; padding-inline: 0.5rem; }
+.site-footer p { margin-block: 1rem; }
+.site-footer a { color: #46eae7; }
+.site-footer a:hover { color: #f44336; text-decoration: underline; }
+.site-footer .heart { color: #f44336; }
+@media (min-width: 80rem) { .copy-column { margin-left: 4.5rem; } }
+@media (min-width: 100rem) { .copy-column { margin-left: 10.5rem; } }
+@media (max-width: 62.5rem) {
+  .intro, .features { width: 80%; }
+  .palettes { gap: 0.75rem; }
+  .palette-swatch { width: 2.875rem; height: 2.6875rem; }
+}
+@media (max-width: 47.5rem) {
+  .container { width: calc(100% - 2.75rem); margin-inline: auto; }
+  .intro, .features { width: 100%; }
+  .layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-top: 0; }
+  .copy-column { display: contents; }
+  .intro { order: 0; min-height: auto; align-items: center; text-align: center; padding: 3.125rem 0; }
+  h1 { font-size: 4.75rem; }
+  .intro p { font-size: 1.25rem; max-width: 19.375rem; margin-block: 1.375rem 1.5rem; }
+  .phone-column { position: static; width: auto; order: 1; margin-block: 0 3.75rem; }
+  .features { order: 2; gap: 2.5rem; padding-top: 0; }
+  .feature h2 { font-size: 1.6875rem; }
+  .feature p { font-size: 1rem; }
+  .palettes { gap: 0.9375rem; }
+  .site-footer { width: 100%; padding-block: 1rem; text-align: center; background: #fff; color: #616161; }
+  .footer-copy { width: 100%; padding-inline: 1rem; }
+  .site-footer a { color: #f44336; }
+}
+@media (max-width: 22.5rem) {
+  .container { width: calc(100% - 2.25rem); }
+  .palettes { gap: 0.625rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
