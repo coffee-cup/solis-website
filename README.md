@@ -28,3 +28,10 @@ mise run check    # Astro and TypeScript diagnostics
 mise run build    # Generate the static site in dist/
 mise run preview  # Serve the production build locally
 ```
+
+## Privacy policy
+
+`src/pages/privacy-policy.astro` serves `/privacy-policy` for direct linking.
+Keep it aligned with app permissions, data handling, website hosting, and the
+privacy contact. After deployment, the App Store privacy policy URL is
+`https://solisapp.xyz/privacy-policy`.

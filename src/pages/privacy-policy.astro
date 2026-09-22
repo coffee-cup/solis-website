@@ -1,0 +1,102 @@
+---
+import '@fontsource-variable/mulish';
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#397dbc" />
+    <title>Privacy policy · Solis</title>
+    <meta name="description" content="How Solis handles location, saved places, notifications, and information from visitors to the Solis website." />
+    <link rel="canonical" href="https://solisapp.xyz/privacy-policy" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy policy · Solis" />
+    <meta property="og:description" content="How Solis handles your information." />
+    <meta property="og:url" content="https://solisapp.xyz/privacy-policy" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="policy-shell">
+      <nav aria-label="Site"><a class="home-link" href="/">← Solis home</a></nav>
+      <main id="main" class="policy">
+        <header>
+          <h1>Privacy policy</h1>
+          <p class="updated">Last updated <time datetime="2026-09-22">September 22, 2026</time></p>
+          <p>Solis is an iPhone app made by Jake Runzer. This policy covers the Solis app, its widget, and <a href="https://solisapp.xyz">solisapp.xyz</a>.</p>
+          <p>Solis calculates sun times on your device. It has no accounts, advertising, or third-party analytics SDKs. I do not receive your location or saved places, and I do not sell your personal information.</p>
+        </header>
+
+        <section aria-labelledby="location">
+          <h2 id="location">Location and city searches</h2>
+          <p>If you allow location access, Solis uses your device's coordinates to show local sun times and schedule the alerts you choose. It can refresh that location as iOS provides updates. You can use a city you choose manually without granting location access.</p>
+          <p>City searches use Apple's MapKit services. Solis also uses Apple's geocoding services to find a city name or time zone from coordinates. These requests send search text or coordinates to Apple, along with the technical information needed to handle the request. They do not pass through a server operated by me.</p>
+          <p>Apple handles these requests under its <a href="https://www.apple.com/legal/privacy/">privacy policy</a> and <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Maps privacy notice</a>.</p>
+        </section>
+
+        <section aria-labelledby="storage">
+          <h2 id="storage">Information on your device</h2>
+          <p>Solis stores your latest location, selected city, recent saved places, time zone information, and preferences on your device. Preferences include your theme, time format, and notification settings. The app and its widget share this local storage so they can show the same information.</p>
+          <p>Solis does not upload this data to me or operate an account or cloud sync service. Your device backups may include app data, depending on your Apple settings.</p>
+        </section>
+
+        <section aria-labelledby="notifications">
+          <h2 id="notifications">Notifications</h2>
+          <p>If you enable alerts, Solis calculates their times and schedules local notifications on your device. It does not use a remote push notification service. You can turn alerts off in Solis or disable notification permission in iOS Settings.</p>
+        </section>
+
+        <section aria-labelledby="website">
+          <h2 id="website">Website visits</h2>
+          <p>The Solis website does not use advertising trackers, analytics scripts, or tracking cookies. Fonts and images are served with the site.</p>
+          <p>The website's hosting provider may process standard request information, such as your IP address, browser details, requested pages, and request times, to deliver and secure the site. Hosting records are retained according to the provider's operational and legal requirements. You can contact me with questions about these records or to request deletion of information associated with your visit.</p>
+          <p>Links to the App Store and other websites take you to services with their own privacy policies.</p>
+        </section>
+
+        <section aria-labelledby="contact-data">
+          <h2 id="contact-data">When you contact me</h2>
+          <p>If you email me, I receive your email address and anything you include in your message. I use that information to respond and handle your request. My email provider processes the correspondence to deliver and store it.</p>
+          <p>I keep correspondence only as long as needed to handle the request and meet any legal obligations. You can ask me to delete it using the contact address below.</p>
+        </section>
+
+        <section aria-labelledby="choices">
+          <h2 id="choices">Your choices and deleting data</h2>
+          <p>You can revoke location access at any time in iOS Settings under Privacy &amp; Security → Location Services → Solis. Revoking permission stops new location access but does not erase places already stored on your device.</p>
+          <p>To remove Solis's local app data, delete the app from your device. Offloading the app keeps its data. Copies in device backups may remain until you delete those backups using Apple's backup controls.</p>
+          <p>I cannot access or delete the data stored on your device. For information you have sent to me, you can request access, correction, or deletion by email.</p>
+        </section>
+
+        <section aria-labelledby="changes">
+          <h2 id="changes">Changes to this policy</h2>
+          <p>If Solis's privacy practices change, I will update this page and its date. Material changes that require permission will be presented before the relevant data is used.</p>
+        </section>
+
+        <section aria-labelledby="contact">
+          <h2 id="contact">Contact</h2>
+          <p>For privacy questions or requests, contact Jake Runzer at <a href="mailto:jakerunzer@gmail.com">jakerunzer@gmail.com</a>.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .policy-shell { width: min(100% - 2rem, 48rem); margin-inline: auto; padding-block: 2rem; }
+  nav { margin-bottom: 1.25rem; }
+  .home-link { display: inline-block; padding: 0.75rem 1rem; border-radius: 0.5rem; background: #ffffff26; color: #183550; font-weight: 650; }
+  .home-link:hover { background: #ffffff45; }
+  .home-link:focus-visible { outline-color: #183550; }
+  .policy { padding: clamp(1.5rem, 5vw, 3.5rem); border-radius: 0.75rem; background: #fcfdff; color: #253557; }
+  h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); font-weight: 400; line-height: 1.15; }
+  h2 { margin-bottom: 0.75rem; font-size: 1.375rem; font-weight: 700; line-height: 1.35; }
+  p { font-size: 1.0625rem; line-height: 1.75; }
+  p + p { margin-top: 1rem; }
+  .updated { margin-block: 1rem 2rem; font-size: 0.875rem; color: #57657b; }
+  section { margin-top: 2.5rem; }
+  .policy a { color: #205f8a; text-decoration: underline; text-underline-offset: 0.2em; overflow-wrap: anywhere; }
+  .policy a:hover { color: #343c99; }
+  .policy a:focus-visible { outline-color: #205f8a; }
+</style>
