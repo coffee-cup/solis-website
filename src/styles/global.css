@@ -2,14 +2,17 @@
   font-size: 16px;
   font-family: 'Mulish Variable', sans-serif;
   color: #fff;
-  background: #397dbc;
+  background: #e8765a;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 2rem; }
-body { margin: 0; min-height: 100svh; background: linear-gradient(to top right, #4e50b8, #46eae7); background-attachment: fixed; }
+body { margin: 0; min-height: 100svh; }
+/* Animated background: an oversized fixed gradient layer drifts along its diagonal (transform only, so it stays on the GPU). */
+body::before { content: ''; position: fixed; top: 0; left: 0; z-index: -1; width: 200vw; height: 200vh; height: 200lvh; pointer-events: none; background: linear-gradient(to top right, #4a1242 0%, #e8765a 50%, #f0a55a 100%); transform: translate(0, -50%); will-change: transform; animation: background-drift 10s ease-in-out infinite alternate; }
+@keyframes background-drift { to { transform: translate(-50%, 0); } }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 img, svg { vertical-align: middle; }
@@ -38,8 +41,8 @@ h1 { font-size: 6rem; font-weight: 300; line-height: 1.25; letter-spacing: norma
 .site-footer { width: 58.333333%; padding-block: 50svh; color: #fff; font-size: 1.25rem; line-height: 1.6; }
 .footer-copy { width: 50%; margin-inline: auto; padding-inline: 0.5rem; }
 .site-footer p { margin-block: 1rem; }
-.site-footer a { color: #46eae7; }
-.site-footer a:hover { color: #f44336; text-decoration: underline; }
+.site-footer a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 0.2em; }
+.site-footer a:hover { color: #4a1242; }
 .site-footer .heart { color: #f44336; }
 @media (min-width: 80rem) { .copy-column { margin-left: 4.5rem; } }
 @media (min-width: 100rem) { .copy-column { margin-left: 10.5rem; } }
@@ -69,4 +72,4 @@ h1 { font-size: 6rem; font-weight: 300; line-height: 1.25; letter-spacing: norma
   .container { width: calc(100% - 2.25rem); }
   .palettes { gap: 0.625rem; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } body::before { animation: none; } }
