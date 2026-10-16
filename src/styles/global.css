@@ -9,7 +9,10 @@
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 2rem; }
-body { margin: 0; min-height: 100svh; background: linear-gradient(to top right, #4e50b8, #46eae7); background-attachment: fixed; }
+body { margin: 0; min-height: 100svh; }
+/* Animated background: an oversized fixed gradient layer drifts along its diagonal (transform only, so it stays on the GPU). */
+body::before { content: ''; position: fixed; top: 0; left: 0; z-index: -1; width: 200vw; height: 200vh; height: 200lvh; pointer-events: none; background: linear-gradient(to top right, #4e50b8 0%, #46eae7 50%, #7a4fc9 100%); transform: translate(0, -50%); will-change: transform; animation: background-drift 24s ease-in-out infinite alternate; }
+@keyframes background-drift { to { transform: translate(-50%, 0); } }
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 img, svg { vertical-align: middle; }
@@ -69,4 +72,4 @@ h1 { font-size: 6rem; font-weight: 300; line-height: 1.25; letter-spacing: norma
   .container { width: calc(100% - 2.25rem); }
   .palettes { gap: 0.625rem; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } body::before { animation: none; } }
